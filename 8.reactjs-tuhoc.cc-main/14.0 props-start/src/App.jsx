@@ -1,7 +1,7 @@
 import Header from "./components/Header/Header";
 import MainContent from "./components/MainContent/MainContent";
 import { myData } from "../data";
-
+import TabButton from "./TabButton";
 
 function App() {
   return (
@@ -17,6 +17,22 @@ function App() {
           <MainContent {...myData[3]}/>
           
           </ul>
+        </section>
+
+        <section id="examples">
+          <h2>Example</h2>
+          <menu>
+            <li><button>Components</button></li>
+            <li><button>JSX</button></li>
+            <li><button>Props</button></li>
+            <li><button>State</button></li>
+
+            <TabButton>Components</TabButton>
+            {/* <TabButton aaa ="Components"></TabButton> */}
+            <TabButton>JSX</TabButton>
+            <TabButton>Props</TabButton>
+            <TabButton>State</TabButton>
+          </menu>
         </section>
       </main>
     </>
