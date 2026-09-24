@@ -4,6 +4,9 @@ import { myData } from "../data";
 import TabButton from "./TabButton";
 
 function App() {
+   function handleSelect() {
+        alert("Nút bấm được click");
+    }
   return (
     <>
       <Header />
@@ -27,11 +30,11 @@ function App() {
             <li><button>Props</button></li>
             <li><button>State</button></li>
 
-            <TabButton>Components</TabButton>
+            <TabButton onSelect={handleSelect}>Components</TabButton>
             {/* <TabButton aaa ="Components"></TabButton> */}
-            <TabButton>JSX</TabButton>
-            <TabButton>Props</TabButton>
-            <TabButton>State</TabButton>
+            <TabButton onSelect={handleSelect}>JSX</TabButton>
+            <TabButton onSelect={handleSelect}>Props</TabButton>
+            <TabButton onSelect={handleSelect}>State</TabButton>
           </menu>
         </section>
       </main>

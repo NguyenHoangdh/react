@@ -1,17 +1,13 @@
-export default function TabButton({children}) {
+export default function TabButton({children, onSelect}) {
     //js
     // const btn = document.querySelector("button");
     // btn.addEventListener("click", ()=>{//tham số 1 là lắng nghe sk, tham số 2 là thực hiện hàm
     //     //làm việc gì đó
     // }) 
 
-    function handleClick() {
-        alert("Nút bấm được click");
-    }
-
     return (
         <li>
-            <button onClick={handleClick}>
+            <button onClick={onSelect}>
                 {children}
             </button>
         </li>
